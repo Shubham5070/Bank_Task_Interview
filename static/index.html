@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IASW System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Intelligent Account Servicing Workflow</h1>
+
+<div class="container">
+
+    <h2>Submit Request</h2>
+    <form id="uploadForm">
+        <input type="text" id="customer_id" placeholder="Customer ID" required>
+        <input type="text" id="old_name" placeholder="Old Name" required>
+        <input type="text" id="new_name" placeholder="New Name" required>
+        <input type="file" id="file" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Pending Requests</h2>
+    <button onclick="loadPending()">Refresh</button>
+
+    <!-- DEBUG MESSAGE -->
+    <p id="debugMsg" style="color: red;"></p>
+
+    <table id="pendingTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Confidence</th>
+                <th>Summary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
